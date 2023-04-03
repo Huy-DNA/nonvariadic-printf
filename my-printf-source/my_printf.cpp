@@ -72,5 +72,4 @@ void my_printf(const char* format, void* buffer) {
         }
     }
     fwrite(format_pos, length, sizeof(char), stdout);
-    fflush(stdout);
 }
