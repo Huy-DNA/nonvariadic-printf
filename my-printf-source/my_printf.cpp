@@ -6,7 +6,7 @@
 #include <memory>
 #include "my_printf.h"
 
-void my_printf(const char* format, void* buffer) {
+void _my_printf_(const char* format, void* buffer) {
     void* p_last = buffer;
 
     const char* format_pos = format;
