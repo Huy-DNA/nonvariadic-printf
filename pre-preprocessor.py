@@ -6,7 +6,7 @@ def printfSubstitute(match):
     def getWriteParamString(param):
         return f"""
             p_last = (char*)p_last - 1; // avoid the std::align pitfall
-            __realign(p_last, decltype({param} + 0)*);
+            __realign(p_last, decltype({param} + 0));
             *(decltype({param} + 0)*)p_last = {param};
             p_last = (decltype({param} + 0)*)p_last + 1;
         """
