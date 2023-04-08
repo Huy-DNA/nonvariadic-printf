@@ -1,7 +1,7 @@
 import sys
 import re
 
-printfPattern = re.compile(r"my_printf\s*\(([^,]*)((?:,[^,]*)*)\)\s*;", re.MULTILINE | re.DOTALL)
+printfPattern = re.compile(r"my_printf\s*\(([^,;()]*)((?:,[^,;()]*)*)\)\s*;", re.MULTILINE | re.DOTALL)
 def printfSubstitute(match):
     def getWriteParamString(param):
         return f"""
@@ -25,7 +25,7 @@ def printfSubstitute(match):
 
         {paramWriteStatements}
 
-        my_printf({formatString}, __internal_buffer);
+        _my_printf_({formatString}, __internal_buffer);
 
         free(__internal_buffer);
     }}
