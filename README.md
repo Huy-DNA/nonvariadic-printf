@@ -1,5 +1,7 @@
 # nonvariadic-printf
-An implementation of printf + A pre-preprocessor to pass the code through before compiling
+An implementation of printf + A pre-preprocessor to pass the code through before compiling.
+
+Please read the blog post at https://blogginginhell.netlify.app/posts/printf-a-speculative-implementation to understand the idea.
 
 ## Requirements
 - bash
